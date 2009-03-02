@@ -1,0 +1,11 @@
+<h1>Uptime</h1>
+
+<a href="{{logout}}">logout</a>
+
+{% if sites %}
+<ul>
+{% for site in sites %}
+    <li>{{site.name}} - <a href="{{site.url}}">{{site.url}}</a></li>
+{% endfor %}
+</ul>
+{% endif %}
