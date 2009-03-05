@@ -1,0 +1,13 @@
+status: 200
+content-length: 86
+content-location: http://localhost:8080/site/localhost/
+server: Development/1.0
+cache-control: no-cache
+date: Thu, 05 Mar 2009 18:53:24 GMT
+content-type: text/html; charset=utf-8
+
+{
+    "url": "http:\/\/localhost:8000", 
+    "name": "localhost", 
+    "email": null
+}

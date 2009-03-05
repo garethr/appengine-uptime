@@ -102,7 +102,7 @@ class Sites(webapp.RequestHandler):
             sites_for_output[site.name] = site_for_output
     
         # create the JSON object we're going to return
-        json = simplejson.dumps(sites_for_output, sort_keys=False, indent=4)
+        json = simplejson.dumps(sites_for_output, sort_keys=False)
 
         # serve the response with the correct content type
         #self.response.headers['Content-Type'] = 'application/json'
