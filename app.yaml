@@ -10,4 +10,4 @@ handlers:
 
 - url: /.*
   script: main.py
-  login: admin
+  #login: admin

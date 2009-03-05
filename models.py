@@ -6,7 +6,7 @@ class Site(db.Model):
     email = db.EmailProperty()
     
 class Ping(db.Model):
-    site = 
+    site = db.ReferenceProperty(Site, required=True)
     date = db.DateTimeProperty(auto_now_add=True)
     code = db.IntegerProperty(required=True)
     up = db.BooleanProperty(default=True)

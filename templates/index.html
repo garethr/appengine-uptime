@@ -5,7 +5,17 @@
 {% if sites %}
 <ul>
 {% for site in sites %}
-    <li>{{site.name}} - <a href="{{site.url}}">{{site.url}}</a></li>
+    <li>
+        <h2>{{site.name}} - <a href="{{site.url}}">{{site.url}}</a></h2>
+        {% if site.ping_set %}
+        <ol>
+        {% for ping in site.ping_set %}
+            <li class="{% if ping.up %}up{% else %}down{% endif %}">{{ ping.date }} - 
+            {{ ping.code }}</li>
+        {% endfor %}
+        </ol>
+        {% endif %}
+    </li>
 {% endfor %}
 </ul>
 {% endif %}
